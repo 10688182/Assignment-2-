@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+    int arr[10],m,p,max,min;
+    cout<<"Enter the size of the array: ";
+    cin>> m;
+    cout<< "Enter the members of the array: ";
+    for (p=0; p<m; p++)
+        cin>> arr[p];
+    max = arr[0];
+    for (p=0; p<m; p++)
+    {
+        if (max < arr[p])
+            max = arr[p];
+    }
+    min = arr[0];
+    for(p=0; p<m; p++)
+    {
+        if (min>arr[p])
+            min = arr[p];
+    }
+    cout<<"Largest member: "<< max;
+    cout<<"Smallest member: "<<min;
+    return 0;
+}
